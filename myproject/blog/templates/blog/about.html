@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>hai</title>
+
+<body>
+    <!-- <h1>About{{data}}</h1>
+    {% for Address in fulldata %}
+        <p>{{Address.name}}
+        </p>
+        <p>{{Address.place}}
+        </p>
+        <p>{{Address.state}}
+        </p>
+        <p>{{Address.city}}
+        </p>
+        <hr>
+    {% endfor %} -->
+
+    
+    {% for no in event %}
+        <p>{{no.name}}
+        </p>
+        <p>{{no.event_date}}
+        </p>
+        <p>{{no.description}}
+        </p>
+        <p>{{no.venue.name}}
+        </p>
+        <p>{{no.venue.address}}
+        </p>
+        {% for memb in no.attendees.all %}
+        <p>
+            {{memb.name}}
+        </p>
+        <p>
+            {{memb.place}}
+        </p>
+        {% endfor %}
+        <hr>
+    {% endfor %}
+</body>
+</head>
+
+</html>

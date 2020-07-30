@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .navbar-brand {
+            background-color: black;
+        }
+
+        .b {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+            border: 1px solid #ccc;
+        }
+
+        .table {
+
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">OfferZone</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Mall</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Shop</a></li>
+                <input type="text" placeholder="Search.." class="b">
+            </ul>
+        </div>
+    </nav>
+
+    <!-- navigation ends -->
+
+    <!-- start table -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th> City</th>
+                <th> State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>chavakkad</td>
+                <td>thrisur</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+                <td>Thalikulam</td>
+                <td>Kunnamkulam</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+                <td>Nalamkallu</td>
+                <td>thrisur</td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+
+
+
+<div class="content-section">
+    <div class="list-group">
+        {% for Student in details %}
+        <a href="#" class="list-group-item list-group-item-action"> {{Student.firstname}}</a>
+        <a href="#" class="list-group-item list-group-item-action"> {{Student.lastname}}</a>
+        <a href="#" class="list-group-item list-group-item-action"> {{Student.email}}</a>
+        <a href="#" class="list-group-item list-group-item-action"> {{Student.city}}</a>
+        <a href="#" class="list-group-item list-group-item-action"> {{Student.state}}</a>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="content-section">
+    <div class="list-group">
+        
+        <a href="#" class="list-group-item list-group-item-action"> {{data2}}</a>
+    </div>
+</div>
+
+</body>
+
+</html>
